@@ -1,0 +1,16 @@
+description: Launch react web applications prepared for microfrontend environments with webpack module federation.
+
+name: matter-web-react-vite
+
+display-name: Stack Web React Vite
+
+picture: "logo.png"
+
+category: Frontend
+
+about: about.md
+
+useCases:
+  - title: Criar aplicação Vite
+    content: useCase.md
+    stackfile: stackfiles/default.yaml

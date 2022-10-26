@@ -1,0 +1,4 @@
+type: app
+displayName: Basic Template
+description: Template to develop a React application prepared to connect with an microfrontend shell.
+template: matter-web-react-vite/web-react-vite
