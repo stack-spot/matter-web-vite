@@ -1,1 +1,1 @@
-The **`web-react-app`** Template creates a Stack React application.
+The **`web-react-vite-app`** template creates a Vite + React application
