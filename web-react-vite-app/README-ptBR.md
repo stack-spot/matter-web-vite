@@ -1,9 +1,9 @@
-- **Descrição:** O Template `web-react-app` cria uma aplicação micro frontend React.
+- **Descrição:** O Template `web-react-vite-app` cria uma aplicação micro frontend React.
 - **Categoria:** Frontend.
 - **Stack:** React.
-- **Criado em:** 01/02/2022.
-- **Última atualização:** 01/02/2022.
-- **Download:** https://github.com/stack-spot/web-react-app-template.git
+- **Criado em:** 01/11/2022.
+- **Última atualização:** 01/11/2022.
+- **Download:** <https://github.com/stack-spot/matter-web-vite>
 
 ## **Visão Geral**
 
@@ -17,12 +17,12 @@ Para utilizar este Template, é necessário ter a Stack web-react importada pelo
 
 #### Instalação
 
-Para fazer o download do **web-react-app**, siga os passos abaixo:
+Para fazer o download do **web-react-vite-app**, siga os passos abaixo:
 
 **Passo 1.** Copie a URL abaixo e cole no seu navegador/terminal:
 
-```
-https://github.com/stack-spot/web-react-app-template.git
+```shell
+https://github.com/stack-spot/matter-web-vite
 ```
 
 **Passo 2.** Os inputs necessários para utilizar o Template são:
@@ -30,10 +30,9 @@ https://github.com/stack-spot/web-react-app-template.git
 | **Campo**    | **Valor** | **Descrição**                       |
 | :----------- | :-------- | :---------------------------------- |
 | Project Name | string    | Nome da aplicação                   |
-| Add Routing  | boolean   | Adicionar roteamento ao aplicativo? |
 
-**Passo 3.** Após adicionar o Plugin, execute o comando abaixo para baixar todas as dependências no seu projeto :
+**Passo 3.** Após adicionar o Template, execute o comando abaixo para baixar todas as dependências no seu projeto :
 
-```
+```shell
   npm install
 ```

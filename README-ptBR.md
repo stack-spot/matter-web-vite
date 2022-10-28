@@ -1,3 +1,3 @@
-# matter-web-react
+# matter-web-vite
 
-A Stack **Web React** provê a inicialização de um projeto Web React. Ele é preparado para o esenvolvimento com **`microfrontend**`, utilizando o **`module federation`** do **webpack**.
+A Stack **Web React Vite** provê a inicialização de um projeto Vite. Ele é preparado para o desenvolvimento rápido, oferecendo HMR e ESModules.

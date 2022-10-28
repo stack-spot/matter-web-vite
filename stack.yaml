@@ -1,6 +1,6 @@
 description: Launch react web applications prepared for microfrontend environments with webpack module federation.
 
-name: matter-web-react-vite
+name: matter-web-vite
 
 display-name: Stack Web React Vite
 
