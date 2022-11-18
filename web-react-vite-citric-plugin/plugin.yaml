@@ -1,0 +1,86 @@
+name: citric
+description: Adicionar biblioteca Citric para Stack React
+
+types:
+  - app
+
+# Nome com formatação livre que será exibido no portal.
+displayName: Citric
+
+# caso a picture esteja fora do repo colocar uma url externa
+# Categorias disponíveis:
+# [sre, frontend, backend, fullStack, analytics]
+picture: "plugin.png"
+
+# Especificar a categoria da stack.
+# Plugin podem perceber a qualquer category
+category: frontend, design-system
+
+## Lista de tecnologias que você gostaria de enfatizar que é compativel
+compatibility:
+  - reactjs
+
+# Especificar um arquivo .md que explique o about do template
+# por padrão o valor é about.md
+about: docs/about.md
+# Especificar um arquivo .md que explique o usage do template
+# por padrão o valor é usage.md
+usage: docs/usage.md
+# Especificar um arquivo .md que explique useCase do template
+# por padrão o valor é usage.md
+useCase: docs/useCase.md
+# Especificar um arquivo .md que explique a implementation do template
+# por padrão o valor é implementation.md
+implementation: docs/implementation.md
+
+# tecnologies que o plugin utiliza
+# A lista completa das tecnologias que podem ser cadastradas estão disponiveis na Documentação
+technologies: [ "ReactJS", "NextJS" ]
+
+hooks:
+  - type: run
+    trigger: before-render
+    working-dir: app/
+    linux:
+      - echo Installing Citric Dependencies ...
+      - npm install --dev @citric/core @citric/theme-types @citric/icons styled-components
+    windows:
+      - echo Installing Citric Dependencies ...
+      - cmd /c npm install --dev @citric/core @citric/theme-types @citric/icons styled-components
+    mac:
+      - echo Installing Citric Dependencies ...
+      - npm install --dev @citric/core @citric/theme-types @citric/icons styled-components
+
+  - type: edit
+    trigger: after-render
+    path: app/src/main.tsx
+    changes: 
+      - search: 
+          string: import
+          insert-after: 
+            snippet: snippets/imports.tsx
+      - search:
+          string: "<AppRouting />"
+          replace-by: 
+            snippet: snippets/theme-provider.tsx
+
+  - type: run
+    trigger: after-render
+    working-dir: app/src/pages/Home
+    mac: 
+      - rm index.tsx
+      - touch index.tsx
+    linux: 
+      - rm index.tsx
+      - touch index.tsx
+    windows: 
+      - del index.tsx
+      - echo > index.tsx
+  
+  - type: edit
+    trigger: after-render
+    path: app/src/pages/Home/index.tsx
+    changes : 
+      - insert:
+          line: 0
+          snippet: snippets/home.tsx

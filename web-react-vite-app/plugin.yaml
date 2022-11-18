@@ -30,16 +30,16 @@ compatibility:
 
 # Especificar um arquivo .md que explique o about do template
 # por padrão o valor é about.md
-about: about.md
+about: docs/about.md
 # Especificar um arquivo .md que explique o usage do template
 # por padrão o valor é usage.md
-usage: usage.md
+usage: docs/usage.md
 # Especificar um arquivo .md que explique useCase do template
 # por padrão o valor é usage.md
-useCase: useCase.md
+useCase: docs/useCase.md
 # Especificar um arquivo .md que explique a implementation do template
 # por padrão o valor é implementation.md
-implementation: implementation.md
+implementation: docs/implementation.md
 
 # tecnologies que o template utiliza
 # A lista completa das tecnologias que podem ser cadastradas estão disponiveis na Documentação

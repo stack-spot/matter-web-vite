@@ -1,11 +1,15 @@
 import React from 'react'
-import { Title, Subtitle } from './styled'
+import styled from 'styled-components'
+
+export const Text = styled.h1`
+  font-size: 1.8rem;
+  color: #000000;
+`
 
 export const Home = () => {
   return (
     <>
-      <Title>Welcome Vite + React</Title>
-      <Subtitle>With TypeScript</Subtitle>
+      <Text>Welcome React + Vite Boilerplate</Text>
     </>
   )
 }

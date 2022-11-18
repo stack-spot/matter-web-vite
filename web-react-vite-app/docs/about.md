@@ -1,0 +1,1 @@
+The **`web-react-app`** Template creates a Stack React application.
