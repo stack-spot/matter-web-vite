@@ -1,0 +1,6 @@
+type: app
+displayName: Vite Template with Citric
+description: Template to develop a React application prepared to connect with an microfrontend shell.
+template: matter-web-vite/web-react-vite-app
+plugins: 
+  - plugin: matter-web-vite/web-react-vite-citric
