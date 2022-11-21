@@ -39,4 +39,6 @@ hooks:
           string: import
           insert-after: 
             value: "import '@src/config/i18n'; \n"
+          when:
+            not-exists: "import '@src/config/i18n'; \n"
 

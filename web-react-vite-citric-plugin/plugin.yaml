@@ -1,41 +1,19 @@
 name: web-react-vite-citric
-description: Adicionar biblioteca Citric para Stack React
-
+description: Add citric on project vite
+display-name: web-react-vite-citric
+picture: plugin.png
+category: frontend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+compatibility:
+  - react
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies
+  - Typescript
+  - Web
 types:
   - app
-
-# Nome com formatação livre que será exibido no portal.
-displayName: Citric
-
-# caso a picture esteja fora do repo colocar uma url externa
-# Categorias disponíveis:
-# [sre, frontend, backend, fullStack, analytics]
-picture: "plugin.png"
-
-# Especificar a categoria da stack.
-# Plugin podem perceber a qualquer category
-category: frontend, design-system
-
-## Lista de tecnologias que você gostaria de enfatizar que é compativel
-compatibility:
-  - reactjs
-
-# Especificar um arquivo .md que explique o about do template
-# por padrão o valor é about.md
-about: docs/about.md
-# Especificar um arquivo .md que explique o usage do template
-# por padrão o valor é usage.md
-usage: docs/usage.md
-# Especificar um arquivo .md que explique useCase do template
-# por padrão o valor é usage.md
-useCase: docs/useCase.md
-# Especificar um arquivo .md que explique a implementation do template
-# por padrão o valor é implementation.md
-implementation: docs/implementation.md
-
-# tecnologies que o plugin utiliza
-# A lista completa das tecnologias que podem ser cadastradas estão disponiveis na Documentação
-technologies: [ "ReactJS", "NextJS" ]
 
 hooks:
   - type: run
@@ -59,10 +37,15 @@ hooks:
           string: import
           insert-after: 
             snippet: snippets/imports.tsx
+          when:
+            not-exists-snippet: snippets/imports.tsx
+
       - search:
           string: "<AppRouting />"
           replace-by: 
             snippet: snippets/theme-provider.tsx
+          when:
+            not-exists-snippet: snippets/theme-provider.tsx
 
   - type: run
     trigger: after-render
@@ -84,3 +67,5 @@ hooks:
       - insert:
           line: 0
           snippet: snippets/home.tsx
+          when: 
+            not-exists-snippet: snippets/home.tsx
