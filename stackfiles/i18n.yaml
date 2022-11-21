@@ -1,0 +1,8 @@
+type: app
+displayName: Vite Template with i18n-Next
+description: Template for developing a React application using Vite framework with i18n-next
+# template used to create the project
+template: matter-web-vite/web-react-vite-app
+# list of plugins to be applied after project creation
+plugins:
+  - plugin: matter-web-vite/web-react-vite-i18n

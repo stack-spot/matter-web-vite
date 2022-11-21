@@ -6,10 +6,12 @@ export const Text = styled.h1`
   color: #000000;
 `
 
-export const Home = () => {
+const Home: React.FC = () => {
   return (
     <>
       <Text>Welcome React + Vite Boilerplate</Text>
     </>
-  )
+  );
 }
+
+export default Home;

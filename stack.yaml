@@ -1,16 +1,15 @@
-description: Inicialize aplicações web react rapidas com Vite.js
-
+description: Start up fast react web apps with Vite.js
 name: matter-web-vite
-
-display-name: Stack Web React Vite
-
-picture: "logo.png"
-
-category: Frontend
-
-about: about.md
-
-useCases:
-  - title: Criar aplicação Vite
-    content: useCase.md
+display-name: matter-web-vite
+picture: stack.png
+category: frontend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+compatibility: # Put a list of technologies compatible with the stack
+  - react
+technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies 
+  - Typescript
+  - Web
+about: docs/about.md
+use-cases:
+  - title: Create Vite application
+    content: docs/use-case.md
     stackfile: stackfiles/default.yaml

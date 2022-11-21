@@ -1,4 +1,5 @@
 type: app
 displayName: Vite Template
-description: Template to develop a React application prepared to connect with an microfrontend shell.
+description: Default stackfile usecase description
+# template used to create the project
 template: matter-web-vite/web-react-vite-app

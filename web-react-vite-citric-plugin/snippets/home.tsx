@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Link, Text } from '@citric/core'
 
-export const Home = () => {
+const Home: React.FC = () => {
   return (
     <Container>
       <Text my={5} appearance='h1'>
@@ -13,3 +13,5 @@ export const Home = () => {
     </Container>
   )
 }
+
+export default Home;

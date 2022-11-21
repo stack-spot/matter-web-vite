@@ -1,0 +1,42 @@
+name: web-react-vite-i18n
+description: Add i18n on project vite
+display-name: web-react-vite-i18n
+picture: plugin.png
+category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+compatibility:
+  - java
+  - spring
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies: # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/yaml/#technologies
+  - React
+  - Typescript
+  - Web
+types:
+  - app
+
+hooks:
+  - type: run
+    trigger: before-render
+    working-dir: app/
+    linux:
+      - echo Installing i18n Dependencies ...
+      - npm install --save react-i18next i18next i18next-browser-languagedetector i18next-http-backend
+    windows:
+      - echo Installing i18n Dependencies ...
+      - cmd /c npm install --save react-i18next i18next i18next-browser-languagedetector i18next-http-backend
+    mac:
+      - echo Installing i18n Dependencies ...
+      - npm install --save react-i18next i18next i18next-browser-languagedetector i18next-http-backend
+
+  - type: edit
+    trigger: after-render
+    path: app/src/main.tsx
+    changes: 
+      - search: 
+          string: import
+          insert-after: 
+            value: "import '@src/config/i18n'; \n"
+
