@@ -2,9 +2,9 @@ name: web-react-vite-citric
 description: Add citric on project vite
 display-name: web-react-vite-citric
 picture: plugin.png
-category: frontend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+category: Frontend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
 compatibility:
-  - react
+  - React
 about: docs/about.md
 usage: docs/usage.md
 use-case: docs/use-case.md

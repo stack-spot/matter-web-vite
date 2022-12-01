@@ -2,10 +2,9 @@ name: web-react-vite-i18n
 description: Add i18n on project vite
 display-name: web-react-vite-i18n
 picture: plugin.png
-category: backend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
+category: Frontend # Ref: https://docs.stackspot.com/docs/create-stacks/yaml-files/plugin/#category
 compatibility:
-  - java
-  - spring
+  - React
 about: docs/about.md
 usage: docs/usage.md
 use-case: docs/use-case.md
